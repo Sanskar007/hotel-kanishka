@@ -1,9 +1,23 @@
+
 @import url('https: //fonts.googleapis.com/css?family=Rajdhani');
+
 @import url('https: //fonts.googleapis.com/css?family=Cinzel+Decorative');
 
 :root {
-  --main_font: 'Rajdhani','arial';
-  --hero_font: 'Cinzel Decorative', 'cursive';
+  --main_font: 
+    'Rajdhani', 
+    'Segoe UI',
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+
+  --hero_font: 
+    'Cinzel Decorative',
+    serif, 
+    'fantasy' , 
+    'cursive'; 
+
   --light_grey: rgba(244, 244, 244, 0.7);
   --light_grey_darker: rgb(225, 225, 225);
   --red_glow:#d5726f;
@@ -11,7 +25,7 @@
 }
 
 html {
-  font-family: 'Rajdhani';
+  font-family: var(--main_font);
   font-size: 1rem;
   font-weight: 400;
   
@@ -20,7 +34,7 @@ html {
 
 
 body {
-  font-family: 'Rajdhani';
+  font-family: var(--main_font);
   zoom:0.9;
   /* background-color: #f9e9b5; */
 }
@@ -420,7 +434,7 @@ h2 {
 
 .itemPrice {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 20px;
 }
 
