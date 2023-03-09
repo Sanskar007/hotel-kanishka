@@ -1,38 +1,583 @@
+@import url('https: //fonts.googleapis.com/css?family=Rajdhani');
+@import url('https: //fonts.googleapis.com/css?family=Cinzel+Decorative');
+
+:root {
+  --main_font: 'Rajdhani','arial';
+  --hero_font: 'Cinzel Decorative', 'cursive';
+  --light_grey: rgba(244, 244, 244, 0.7);
+  --light_grey_darker: rgb(225, 225, 225);
+  --red_glow:#d5726f;
+  --dark_grey:rgba(48, 48, 48, 0.7);
+}
+
+html {
+  font-family: 'Rajdhani';
+  font-size: 1rem;
+  font-weight: 400;
+  
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font-family: 'Rajdhani';
+  zoom:0.9;
+  /* background-color: #f9e9b5; */
+}
+
+h2 {
+  font-family: var(--main_font);
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ----------------------hero section-------------------- */
+
+.hero {
+  caret-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("./images/hero1.png");
+  background-color: #474747;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 680px;
+  width: auto;
+  max-height: 680px;
+  overflow-x: hidden;
+  /* height: auto; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.hero img {
+  position: absolute;
+  z-index:1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.heroText {
+  display: flex;
+  flex-direction:column;
+  /* padding: 13rem 3rem; */
+  text-align: center;
+  color: white;
+  font-family: var(--hero_font);
+  font-size: 3rem;
+  font-weight: 400;
+  /* white-space: nowrap; */
+  margin: auto;
+}
+
+/* 820px */
+
+.heroCaption {
   display: flex;
   flex-direction: column;
+  /* padding: 13rem 1rem; */
+  color: white;
+  text-align: right;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: auto;
+}
+
+.heroCaption>p {
+  margin: 0.1rem;
+  white-space: nowrap;
+}
+
+.heroButtons {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 1rem; */
+  align-content: center;
+  justify-content:left;
+}
+
+.heroButton {
+  font-family: var(--main_font);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  margin: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  background: none;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 2px var(--light_grey_darker) solid;
+  transition: all 0.3s;
+}
+
+.heroButton:hover {
+  background-color: var(--red_glow);
+  cursor: pointer;
+  box-shadow: 0px 0px 15px 0px #e6b5b3;
+}
+
+/* ----------------------nav bar----------------------- */
+
+.nav {
+  caret-color: transparent;
+  z-index: 999;
+  color: white;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: 0rem 2rem;
+  border-style: none;
+  /* background: linear-gradient(90deg, rgba(51, 51, 51, 0.7), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(51, 51, 51, 0.7)); */
+  backdrop-filter: blur(20px);
+  background: rgba(128, 128, 128, 0.5);
+}
+
+.navDiv {
+  display: flex;
+  flex-direction: row;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.navDiv>div {
+  padding: 0 1rem;
+  margin : 1rem 0;
+  border-radius: 5px;
+  transition: all 0.15s;
+}
+
+.navDiv>div:hover {
+  cursor: pointer;
+  color: #000000;
+  font-weight: 500;
+  text-shadow:0px 0px 20px rgba(255, 255, 255, 0.652) ;
+}
+
+/* --------------carousel and rooms------------------- */
+
+.roomsLayout {
+  caret-color: transparent;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: black;
+  /* background: linear-gradient(0deg,rgb(243, 253, 255, 0.6), rgba(156, 154, 100, 0),rgba(255, 253, 238, 0.678)); */
+  /* background-image: url(./images/img3.png); */
+}
+
+
+.background-image {
+  filter:blur(70px);
+  position: absolute;
+  z-index: -1;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.carousel-inner {
+  border-radius: 20px;
+  /* margin-bottom: 3rem; */
+  border: 2px solid rgb(142, 142, 142);
+  /* box-shadow: 0px 10px 15px 0px #414141d1; */
+  transition: all 0.2s;
+}
+
+.carousel-inner:hover {
+  box-shadow: 0px 10px 30px 0px rgb(150, 150, 150);
+  filter: brightness(1.1);
+}
+
+.carousel-item {
+  /* max-width: 800px; */
+  max-height: 80vh;
+  /* max-width: 60%; */
+  /* height: auto; */
+  object-position:center;
+}
+
+.carousel-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  background: linear-gradient(90deg,rgba(51, 51, 51, 0.85), rgba(255, 255, 255, 0));
+  /* transform: rotate(90deg); */
+}
+
+.carousel-caption {
+  margin-bottom: 5rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.carousel-control-prev {
+  width: 10%;
+}
+
+.carousel-control-next {
+  width: 10%;
+}
+
+
+/* --------------------booking div--------------------- */
+
+.bookDiv {
+  max-height: 0;
+  width: 100%;
+  /* background-color: rgba(255, 252, 208, 0.307); */
+  background: radial-gradient(rgba(255, 249, 168, 0.1),rgba(253, 255, 234, 0.2),rgba(173, 255, 119, 0.1));
+  overflow: hidden;
+  border: 2px solid;
+  border-color: rgba(128, 128, 128, 0);
+  transition: max-height 0.5s;
+}
+
+.bookDiv.expand {
+  max-height: 40rem;
+  border-color: rgba(128, 128, 128, 0.541);
+}
+
+.bookingSection > p {
+  font-size: 1.1rem;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.callButton {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  /* color: rgb(45, 45, 45); */
+  /* background: rgba(191, 191, 191, 0.185); */
+  color: white;
+  background-color: rgba(4, 121, 4, 0.619);
+  border-radius: 10px;
+  border: 3px rgba(255, 255, 255, 0.296) solid;
+  transition: all 0.3s;
+}
+
+.phoneIcon {
+  z-index: 1;
+  margin: auto;
+  padding: 1px;
+  margin-right: 6px;
+}
+
+.phoneS {
+  opacity: 0;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  margin-right: 5.2rem;
+  margin-top: 0.28rem;
+  filter: blur(3px);
+}
+.callButton:hover {
+  background-color: rgba(112, 201, 112, 0.688);
+  cursor: pointer;
+  box-shadow: 0px 0px 20px 0px  rgb(178, 253, 178);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.callButton:hover .phoneS{
+    opacity: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* ================ Hover arrow animation ============> */
+
+.hoverAnimation {
+  margin-bottom: 10px;
+  height: 30px;
+  width: 40%;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  animation: moveUpDown 1.5s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+  0% {
+    top: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  50% {
+    top: 7px;
   }
+
+  100% {
+    top: 0;
+  }
+}
+
+
+/* ----------------Testimonial Cards------------------- */
+
+.testimonials-layout {
+  display: flex;
+  flex-direction: column;
+  caret-color: transparent;
+}
+
+.test-contacts {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(61.04% 89.69% at 100% 100%, rgba(200, 250, 255, .08) 0%, rgba(156, 237, 246, 0.08) 40.63%, rgba(28, 210, 229, 0) 100%)
+  , radial-gradient(43.78% 64.34% at 60.31% 100%, rgba(23, 74, 228, .08) 0%, rgba(23, 74, 228, 0) 100%),
+    linear-gradient(180deg, rgba(23, 74, 228, 0) 29.44%, rgba(23, 74, 228, .06) 100%),
+    linear-gradient(90deg, #f3f3f789 0%, #ebf0f9a5 100%);
+}
+
+.testimonial-title {
+  margin: 1.8rem;
+  font-size: 2rem;
+  padding: 0;
+  margin-top: 3.5rem;
+}
+
+.cardFlex {
+  width: 98.5%;
+  margin: 0px 15px;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.itemCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem 0.5rem;
+  padding: 1.5rem 1rem;
+  max-width: 18rem;
+  min-width: 15rem;
+  border-radius: 15px;
+  border: 1.6px solid rgba(0, 0, 0, 0.16);
+  transition: all 0.2s;
+
+}
+
+.itemCard:hover {
+  box-shadow: 0px 0px 30px 0px rgba(208, 208, 208, 0.658);
+  transform: scale(1.02);
+  /* border-color: white; */
+}
+
+.itemCard>img {
+  /* object-fit: cover; */
+  width: 6rem;
+  height: 6rem;
+  border-radius: 20px;
+}
+
+/* .itemCard>img:hover {
+  cursor: pointer;
+} */
+
+.itemName {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.cardRating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+}
+
+.cardRating>p {
+  margin: 0 5px;
+}
+
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.itemPrice {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 20px;
+}
+
+/* ----------------------contacts---------------------- */
+
+.contacts-section {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+  padding: 1.5rem;
+  /* padding: 3rem; */
+}
+
+.contacts-section>iframe {
+  border-radius: 20px;
+  border: 2px solid rgb(205, 205, 205);
+  transition: all 0.2s;
+}
+
+.contacts-section>iframe:hover {
+  box-shadow: 0px 0px 30px 0px rgb(216, 216, 216);
+}
+
+.contacts-div {
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(0deg, rgba(156, 154, 100, 0), rgba(243, 253, 255, 0.6)); */
+  /* backdrop-filter: blur(40px); */
+}
+
+.contacts-details {
+  margin:2rem;
+  margin-top: 1rem;
+}
+
+.background-image-contacts {
+  filter: blur(10px);
+  position:absolute;
+  z-index: -1;
+  /* background-position:left; */
+  width: 100%;
+  overflow: hidden;
+}
+
+/* --------------------media queries--------------------- */
+
+@media screen and (max-width: 757px) {
+  .heroCaption {
+    text-align: center;
+    object-position: top;
+    margin-top: 1.5rem;
+  }
+
+  .heroButtons {
+    justify-content: center;
+  }
+
+  .heroText {
+    margin-bottom: 1.5rem;
+  }
+
+  .hr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: white;
+    border-width: 2px;
+  }
+
+}
+
+@media screen and (max-width: 640px) {
+
+  .contacts-section {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .contacts-details {
+    margin: 2rem;
+    margin-top: 3rem;
+  }
+
+  .contacts-div {
+    padding-bottom: 0;
+  }
+
+  .testimonial-title {
+    margin: 0.5rem;
+  }
+
+  .carousel-inner {
+    border-radius: 0px;
+  }
+
+  .itemCard {
+    padding: 0.5rem;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .itemName {
+    margin:5px;
+  }
+
+  .cardFlex {
+    margin: 3px;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+
+}
+
+@media screen and (max-width: 850px) {
+  .carousel-caption {
+    text-align: center;
+    margin: auto;
+    top:30%;
+  }
+
+  .carousel-caption>p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel-caption {
+    text-align: center;
+    margin: auto;
+    top: 15%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .carousel-caption {
+    text-align: center;
+    margin: auto;
+    top: 0%;
+  }
+
+  #LogoDiv.navDiv {
+    display: none;
+  }
+
+  .nav {
+    justify-content:center;
+  }
+
 }
