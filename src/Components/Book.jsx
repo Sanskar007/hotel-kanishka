@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { FaPhoneAlt, FaAngleUp } from "react-icons/fa";
 
 function Book(props) {
@@ -53,4 +53,3 @@ function Book(props) {
 }
 
 export default Book;
-// export default forwardRef(Book);

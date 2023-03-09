@@ -8,7 +8,7 @@ function Contacts( props, ref ) {
   return (
     <div className='contacts-div' ref={ref}>
       
-      <img className='background-image' src={bigMap} />
+      <img className='background-image' src={bigMap} alt=''/>
 
       <HorizontalRule />
 
@@ -20,7 +20,7 @@ function Contacts( props, ref ) {
 
       <div className='contacts-section'>
 
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.5074059787185!2d79.90963254967878!3d23.1516739848137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b3b8baf2581f%3A0x2596e506b4220c2d!2sHotel%20kanishka%20residency%20jabalpur!5e0!3m2!1sen!2sin!4v1678121159913!5m2!1sen!2sin" width="400" height="300" loading="lazy"></iframe>
+        <iframe title="Map Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.5074059787185!2d79.90963254967878!3d23.1516739848137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3981b3b8baf2581f%3A0x2596e506b4220c2d!2sHotel%20kanishka%20residency%20jabalpur!5e0!3m2!1sen!2sin!4v1678121159913!5m2!1sen!2sin" width="400" height="300" loading="lazy"></iframe>
 
         <div className='contacts-details'>
 

@@ -19,7 +19,7 @@ function Rooms( props, ref ) {
   return (
     <div id = 'roomsDivID' ref={ref} className='roomsLayout'>
 
-    <img className='background-image' src={Img3}/>
+    <img className='background-image' src={Img3} alt='' />
 
       <p style={{
         fontWeight:500, 

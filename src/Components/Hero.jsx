@@ -1,7 +1,5 @@
-import React, { forwardRef, useId, useRef } from 'react';
+import React, { forwardRef} from 'react';
 import Button from './Button';
-import hero1 from '../images/hero1.png';
-import HorizontalRule from './HorizontalRule';
 
 function Hero(props, ref) {
 
