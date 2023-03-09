@@ -3,6 +3,16 @@
 
 @import url('https: //fonts.googleapis.com/css?family=Cinzel+Decorative');
 
+@font-face {
+  font-family: 'Rajdhani';
+  src: url('/src/fonts/Rajdhani-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cinzel Decorative';
+  src: url('/src/fonts/CinzelDecorative-Regular.ttf');
+}
+
 :root {
   --main_font: 
     'Rajdhani', 
