@@ -15,7 +15,7 @@ function Contacts( props, ref ) {
       <div className='testimonial-title'>
         
         <p style={{fontWeight:500, margin:0, paddingTop:'3rem'}}>Contact Us</p>
-        <p style={{fontSize:'1.3rem'}}> Many ways to get in touch: </p>
+        <p style={{fontSize:'1.3rem'}}>Many ways to get in touch:</p>
       </div>
 
       <div className='contacts-section'>
