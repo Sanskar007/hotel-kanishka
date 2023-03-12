@@ -7,7 +7,7 @@ function Hero(props, ref) {
     <div id = 'heroDivID' className='hero' ref={ref}>
 
       <div className='heroText'>
-      <p>Hotel</p>
+
         <p style={{margin:"0.5rem"}}>Kanishka Residency</p>
         <div className='heroButtons'>
 

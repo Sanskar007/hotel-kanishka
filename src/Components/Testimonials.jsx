@@ -1,15 +1,12 @@
 import React, { forwardRef } from 'react';
 import HorizontalRule from './HorizontalRule.jsx';
 import ItemCard from './ItemCard.jsx';
-import reviews from './reviews.js'
-// import bck from '../images/img10.jpg'
+import reviews from './reviews.js';
 
 function Testimonials(props, ref) {
 
   return (
     <div className='testimonials-layout' ref={ref}>
-
-      {/* <img className='background-image' src={bck} /> */}
 
       <div className='testimonial-title'>
       <p style={{fontWeight:500, margin:0}}>Testimonials</p>
