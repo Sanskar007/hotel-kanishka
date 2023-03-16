@@ -16,9 +16,14 @@ function Book(props) {
          To book this room, call on the number below to check its availability: 
         </p>
 
+        {/* <p>This is example to use whatsapp custom text message</p>
+        <a href="https://wa.me/15551234567"></a>
+        `Hello, ${name}!` */}
+
         <button 
           className='callButton'
-          onClick={()=>{window.location.href='tel:9755373201'}}
+          // onClick={()=>{window.location.href='tel:9755373201'}}
+          onClick={()=>{window.location.href=`https://wa.me/9131011608?text=Hello%2C%20I%20would%20like%20to%20book%20a%20${props.room}%20room%20and%20check%20its%20availability.`}}
         > 
           <div className='buttonDiv'>
 

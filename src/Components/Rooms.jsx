@@ -50,7 +50,7 @@ function Rooms( props, ref ) {
               }}>Premium rooms starting at ₹2500</p>
 
             <Button 
-              name={'Book this'} 
+              name={'Book now'} 
               clickEvent={()=>{
                 setroomType("Premium");
                 setActive(true);
@@ -77,7 +77,7 @@ function Rooms( props, ref ) {
               }}>Deluxe rooms starting at ₹1500</p>
 
             <Button 
-              name={'Book this'} 
+              name={'Book now'} 
               clickEvent={()=>{
                 setroomType("Deluxe");
                 setActive(true);
@@ -104,7 +104,7 @@ function Rooms( props, ref ) {
               }}>Classic rooms starting at ₹1200</p>
 
             <Button 
-              name={'Book this'} 
+              name={'Book now'} 
               clickEvent={()=>{
                 setroomType("Classic");
                 setActive(true);
