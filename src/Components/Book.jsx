@@ -23,7 +23,7 @@ function Book(props) {
         <button 
           className='callButton'
           // onClick={()=>{window.location.href='tel:9755373201'}}
-          onClick={()=>{window.location.href=`https://wa.me/8107889976?text=Hello%2C%20I%20would%20like%20to%20book%20a%20${props.room}%20room%20and%20check%20its%20availability`}}
+          onClick={()=>{window.location.href=`https://wa.me/9131011608?text=Hello%2C%20I%20would%20like%20to%20book%20a%20${props.room}%20room%20and%20check%20its%20availability`}}
         > 
           <div className='buttonDiv'>
 
